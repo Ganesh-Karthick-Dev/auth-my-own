@@ -1,5 +1,5 @@
 # auth-my-own
-Hi there 👋 , in this project i construct my my own auth implementation with Reactjs for front-end , Nodejs &amp; Expressjs for backend , MongoDB for Database
+Hi there 👋 , in this project i construct my own auth implementation with Reactjs for front-end , Nodejs &amp; Expressjs for backend , MongoDB for Database
 
 # Getting Started with Create React App
 
