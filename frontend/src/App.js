@@ -2,6 +2,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import AuthPage from './pages/AuthPage';
 import LoginPage from './components/LoginPage'
 import SignupPage from './components/SignupPage'
+import Home from './pages/Home';
 
 
 
@@ -12,6 +13,7 @@ function App() {
 
         <Route index element={<LoginPage />}/>
         <Route path='signup' element={<SignupPage />}/>
+        <Route path='home' element={<Home />}/>
 
       </Route>
     )

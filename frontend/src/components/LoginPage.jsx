@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import axios from 'axios'
-import { NavLink } from 'react-router-dom'
+import { NavLink , useNavigate } from 'react-router-dom'
+import { userContext } from '../hooks/userContext'
+
 
 const LoginPage = () => {
 
@@ -8,6 +10,10 @@ const LoginPage = () => {
   const [password , setPassword] = useState('')
 
   const [res,setRes] = useState('')
+
+  const {addUser} = useContext(userContext);
+
+  const navigate = useNavigate();
 
   const handleLogin = ()=> {
 
@@ -20,6 +26,10 @@ const LoginPage = () => {
     .then((d)=>{
       console.log(`user found 😁`);
       setRes(d.data.val)
+      addUser(username)
+      setUsername('')
+      setPassword('')
+      navigate('home')
     })
     .catch((err)=>{
       console.log(err);
