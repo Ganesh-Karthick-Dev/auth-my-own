@@ -39,21 +39,21 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className=" flex bg-grey-100">
+      <div className=" md:flex bg-grey-100">
         <div
           id="login"
-          className=" w-1/2 flex flex-col justify-center items-center"
+          className=" sm:w-full md:w-1/2 flex flex-col justify-center items-center font-primary"
         >
-          <div className=" border  shadow-lg bg-white shadow-slate-600 px-8 py-8 rounded-md">
+          <div className=" border shadow-lg bg-white shadow-slate-600 px-8 py-8 rounded-md">
             <h1 className=" text-center">
-              <span className=" text-3xl">L</span>ogin to get Started !
+              <span className=" text-3xl text-amber-400">L</span>ogin to get Started !
             </h1>
 
             <h1 className=" text-red-800 text-center font-extrabold text-4xl">
               {res}
             </h1>
 
-            <div className=" w-fit p-5 m-5 flex flex-col gap-8">
+            <div className=" sm:w-full md:w-fit p-5 m-5 flex flex-col gap-8">
               <table className="">
                 <tbody>
                   <tr className=" flex flex-col gap-2 mb-3">
@@ -89,7 +89,7 @@ const LoginPage = () => {
 
               <button
                 onClick={handleLogin}
-                className=" text-dark font-bold bg-lime-400 py-2 hover:text-white hover:bg-lime-600 rounded-md"
+                className=" text-dark font-bold text-lime-800 bg-lime-400 py-2 hover:text-white hover:bg-lime-600 rounded-md"
               >
                 Login
               </button>
@@ -104,7 +104,7 @@ const LoginPage = () => {
           </div>
         </div>
 
-        <div id="login-right" className=" w-1/2"></div>
+        <div id="login-right" className=" md:block md:w-1/2"></div>
       </div>
     </>
   );
