@@ -1,0 +1,10 @@
+
+/* for login styles */
+
+#login-right {
+    height: 100vh;
+    background-image: url('./assest/photos/authBg4.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
