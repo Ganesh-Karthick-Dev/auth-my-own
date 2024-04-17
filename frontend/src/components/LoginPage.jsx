@@ -5,6 +5,7 @@ import { userContext } from "../hooks/userContext";
 import "../style.css";
 import { GoogleLogin } from "@react-oauth/google";
 import {jwtDecode} from 'jwt-decode'
+// import loginBg from '../assest/photos/yummy-logo-18.jpeg'
 
 
 
@@ -48,7 +49,7 @@ const LoginPage = () => {
           id="login"
           className=" sm:w-full md:w-1/2 flex flex-col justify-center items-center font-primary"
         >
-          <div className=" border shadow-lg bg-white shadow-slate-600 px-8 py-8 rounded-md">
+          <div id="login-box" className=" border border-gray-700 shadow-lg bg-white shadow-slate-600 px-8 py-8 rounded-md">
             <h1 className=" text-center">
               <span className=" text-3xl text-amber-400">L</span>ogin to get
               Started !
@@ -71,7 +72,7 @@ const LoginPage = () => {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         id="username"
-                        className=" border border-zinc-300 rounded-md"
+                        className=" border w-full border-zinc-300 rounded-md"
                       />
                     </td>
                   </tr>
@@ -85,7 +86,7 @@ const LoginPage = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         id="password"
-                        className=" border border-zinc-300 rounded-md"
+                        className=" border w-full border-zinc-300 rounded-md"
                       />
                     </td>
                   </tr>

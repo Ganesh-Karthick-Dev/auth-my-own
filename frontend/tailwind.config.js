@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily : {
         'primary' : ["Lobster", "sans-serif"],
+        'logo' : ["Bebas Neue", "sans-serif"]
       }
     },
   },

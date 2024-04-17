@@ -70,7 +70,7 @@ const SignupPage = () => {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         id="username"
-                        className=" border border-zinc-300 rounded-md"
+                        className=" border w-full border-zinc-300 rounded-md"
                       />
                     </td>
                   </tr>
@@ -84,7 +84,7 @@ const SignupPage = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         id="password"
-                        className=" border border-zinc-300 rounded-md"
+                        className=" border w-full border-zinc-300 rounded-md"
                       />
                     </td>
                   </tr>
