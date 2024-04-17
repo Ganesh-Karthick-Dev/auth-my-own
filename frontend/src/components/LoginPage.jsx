@@ -3,6 +3,10 @@ import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 import { userContext } from "../hooks/userContext";
 import "../style.css";
+import { GoogleLogin } from "@react-oauth/google";
+import {jwtDecode} from 'jwt-decode'
+
+
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -46,7 +50,8 @@ const LoginPage = () => {
         >
           <div className=" border shadow-lg bg-white shadow-slate-600 px-8 py-8 rounded-md">
             <h1 className=" text-center">
-              <span className=" text-3xl text-amber-400">L</span>ogin to get Started !
+              <span className=" text-3xl text-amber-400">L</span>ogin to get
+              Started !
             </h1>
 
             <h1 className=" text-red-800 text-center font-extrabold text-4xl">
@@ -86,13 +91,26 @@ const LoginPage = () => {
                   </tr>
                 </tbody>
               </table>
-
               <button
                 onClick={handleLogin}
                 className=" text-dark font-bold text-lime-800 bg-lime-400 py-2 hover:text-white hover:bg-lime-600 rounded-md"
               >
                 Login
               </button>
+
+              <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  // console.log(credentialResponse);
+                  let data = jwtDecode(credentialResponse.credential)
+                  console.log(data);
+                  addUser(data.name)
+                  navigate('/home')
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+              />
+
             </div>
 
             <h1 className=" text-center">
