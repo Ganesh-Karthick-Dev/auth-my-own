@@ -21,9 +21,11 @@ function App() {
     )
   );
 
+  let clientId = process.env.REACT_APP_CLIENT_ID ;
+
   return (
     <>
-      <GoogleOAuthProvider clientId="319799807729-f4o2e5qr8a1b4innj40v6urlaorrt73a.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId={clientId}>
         <RouterProvider router={router} />
       </GoogleOAuthProvider>
     </>
